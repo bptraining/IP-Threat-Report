@@ -30,4 +30,11 @@ def format_report(ip, report):
         "malicious": malicious,
         "suspicious": suspicious,
     }
-    
+
+def print_summary(summary):
+    print(f"Results for {summary['ip']}:")
+    print(f"  Country:    {summary['country']}")
+    print(f"  Analysis:   {summary['last_analysis']}")
+    print(f"  Reputation: {summary['reputation']}")
+    print(f"  Stats:      {summary['malicious']} Malicious, {summary['suspicious']} Suspicious, {summary['harmless']} Harmless")
+    print("-" * 30)
